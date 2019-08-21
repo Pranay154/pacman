@@ -4,9 +4,7 @@ public class Gamefield {
     private int height;
     private int width;
 
-    private int pacmanY;
-    private int pacmanX;
-    private Direction pacmanDirection;
+    private Pacman pacman;
 
     enum Direction {
         LEFT,
@@ -20,10 +18,8 @@ public class Gamefield {
         this.width = width;   
     }
 
-    public void addPacman(int y, int x, Direction direction) {
-        pacmanY = y;
-        pacmanX = x;
-        pacmanDirection = direction;
+    public void addPacman(Pacman pacman) {
+        this.pacman = pacman;
     }
     
     public String render() {
@@ -34,23 +30,8 @@ public class Gamefield {
             }
         }
 
-        switch(pacmanDirection) {
-            case LEFT:
-                gamefield[pacmanY][pacmanX] = '>';
-                break;
-            case RIGHT:
-                gamefield[pacmanY][pacmanX] = '<';
-                break;
-            case UP:
-                gamefield[pacmanY][pacmanX] = 'Λ';
-                break;
-            case DOWN:
-                gamefield[pacmanY][pacmanX] = 'V';
-                break;
-            default:
-                gamefield[pacmanY][pacmanX] = '*';
-                break;
-        }
+        gamefield[pacman.getY()][pacman.getX()] = pacman.render();
+
         String result = "";
         for(char[] row : gamefield) {
             result += new String(row) + "\n";
