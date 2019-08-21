@@ -2,7 +2,7 @@ package pacman;
 
 import junit.framework.TestCase;
 
-public class Gametest extends TestCase {
+public class GameTest extends TestCase {
     
     public void testNewGameScoreboard() throws Exception{
         Game g = new Game();
