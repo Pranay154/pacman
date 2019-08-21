@@ -17,6 +17,4 @@ public class Game {
     public Scoreboard getScoreboardScore(){
         return scoreboard;
     }
-
-    
 }

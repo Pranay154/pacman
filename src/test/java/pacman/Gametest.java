@@ -11,9 +11,4 @@ public class Gametest extends TestCase {
         assertEquals(0, score);
         assertEquals(3, health);
     }
-
-    // public void testEmptyGameboard() throws Exception{
-    //     Game g = new Game(2, 2);
-    //     int[][] expectedGameboard =  
-    // }
 }

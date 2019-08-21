@@ -33,5 +33,4 @@ public class Scoreboard {
     public String toString(){
         return "Health: " + this.health + "  Score: " + this.score ;
     }
-
 }
